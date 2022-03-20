@@ -8,5 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  visibility: boolean = false;
+  responsive: boolean = false;
+
+  ngOnInit(): void {
+    this.responsive = window.innerWidth <= 768;
+  }
+
+  updateVisibility() {
+    return (this.visibility = !this.visibility);
+  }
+
+  checkResponsive(event: any) {
+    this.responsive = event.target.innerWidth <= 768;
+    this.visibility = !this.responsive ? false : this.visibility;
+  }
 }

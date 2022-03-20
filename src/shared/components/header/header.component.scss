@@ -1,0 +1,136 @@
+@import "utilities/responsive";
+
+header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  align-items: center;
+  height: 8.5rem;
+  z-index: 9;
+}
+
+nav {
+  gap: 3rem;
+  color: white;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+
+  @include responsive(laptop) {
+    gap: 2.8rem;
+    font-size: 1.2rem;
+  }
+
+  @include responsive(tablet) {
+    display: none;
+  }
+
+  a {
+    transition: 0.5s ease;
+
+    &:hover {
+      filter: opacity(70%);
+    }
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.header-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 120rem;
+  height: 80%;
+
+  a {
+    display: flex;
+  }
+
+  &--logo {
+    height: 5rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+    @include responsive(laptop) {
+      height: 4.5rem;
+    }
+
+    &:hover {
+      filter: opacity(70%);
+    }
+  }
+}
+
+.hamburger-nav {
+  z-index: 19;
+  display: none;
+  height: 1.5rem;
+  align-items: center;
+  transition: 0.5s ease;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+  width: 2rem;
+
+  &:hover {
+    filter: opacity(70%);
+  }
+
+  @include responsive(tablet) {
+    display: flex;
+  }
+
+  &__level {
+    width: 100%;
+    background-color: white;
+    border-radius: 5rem;
+    height: 15%;
+  }
+}
+
+.hamburger-menu {
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+
+  &__nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2.5rem;
+    color: black;
+    width: 100%;
+  }
+}
+
+.hidden-hamburger {
+  display: none;
+}
+
+.active-level {
+  background-color: black;
+}
+
+#about {
+  color: #24282f;
+  background-color: #b3e673;
+  padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+  border-radius: 4rem;
+}
+
+#about-responsive {
+  color: #24282f;
+  background-color: #b3e673;
+  padding: 0.3rem 1.2rem 0.3rem 1.2rem;
+  border-radius: 4rem;
+}
