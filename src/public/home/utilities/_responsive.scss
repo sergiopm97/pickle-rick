@@ -1,8 +1,10 @@
 $breakpoints: (
   portatil-large: 1440px,
   portatil-standard: 1024px,
+  tablet-standard: 768px,
   mobile-large: 425px,
   mobile-medium: 375px,
+  mobile-small: 320px,
 );
 
 @mixin responsive($breakpoint) {

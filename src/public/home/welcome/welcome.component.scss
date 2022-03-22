@@ -37,19 +37,27 @@
       margin: 0;
 
       @include responsive(portatil-large) {
-        font-size: 4rem;
+        font-size: 5vw;
       }
 
       @include responsive(portatil-standard) {
-        font-size: 3rem;
+        font-size: 4.5vw;
+      }
+
+      @include responsive(tablet-standard) {
+        font-size: 7vw;
       }
 
       @include responsive(mobile-large) {
-        font-size: 2.5rem;
+        font-size: 10vw;
       }
 
       @include responsive(mobile-medium) {
-        font-size: 2rem;
+        font-size: 11vw;
+      }
+
+      @include responsive(mobile-small) {
+        font-size: 12vw;
       }
     }
 
@@ -60,12 +68,28 @@
       font-size: 2rem;
       margin: 0;
 
+      @include responsive(portatil-large) {
+        font-size: 2.2vw;
+      }
+
       @include responsive(portatil-standard) {
-        font-size: 1.5rem;
+        font-size: 2.5vw;
+      }
+
+      @include responsive(tablet-standard) {
+        font-size: 3.5vw;
       }
 
       @include responsive(mobile-large) {
-        font-size: 1.5rem;
+        font-size: 5vw;
+      }
+
+      @include responsive(mobile-medium) {
+        font-size: 5.5vw;
+      }
+
+      @include responsive(mobile-small) {
+        font-size: 8vw;
       }
     }
   }
