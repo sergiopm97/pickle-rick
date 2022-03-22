@@ -8,7 +8,7 @@ header {
   background-color: rgba(255, 255, 255, 0.05);
   align-items: center;
   height: 8.5rem;
-  z-index: 9;
+  z-index: 19;
   top: 0;
 }
 
@@ -70,7 +70,6 @@ li {
 }
 
 .hamburger-nav {
-  z-index: 19;
   display: none;
   height: 1.5rem;
   align-items: center;
@@ -100,7 +99,9 @@ li {
   height: 100vh;
   position: fixed;
   background-color: white;
+  margin-top: -8.5rem;
   width: 100vw;
+  z-index: 9;
 
   &__nav {
     height: 100%;

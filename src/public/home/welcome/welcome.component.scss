@@ -1,0 +1,72 @@
+@import "../utilities/responsive";
+
+.welcome-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-image: linear-gradient(
+      rgba(47, 51, 58, 0.45),
+      rgba(179, 230, 115, 0.45)
+    ),
+    url("../../../assets/images/rick-morty-background.jpg");
+  height: calc(100vh - 8.5rem);
+  justify-content: center;
+  background-size: cover;
+  margin-top: 8.5rem;
+
+  @include responsive(mobile-large) {
+    background-position-x: -10rem;
+  }
+
+  &__content {
+    display: flex;
+    max-width: 120rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    @include responsive(portatil-large) {
+      padding: 0rem 2rem 0rem 2rem;
+    }
+
+    &__title {
+      color: white;
+      text-align: center;
+      font-size: 4.5rem;
+      margin: 0;
+
+      @include responsive(portatil-large) {
+        font-size: 4rem;
+      }
+
+      @include responsive(portatil-standard) {
+        font-size: 3rem;
+      }
+
+      @include responsive(mobile-large) {
+        font-size: 2.5rem;
+      }
+
+      @include responsive(mobile-medium) {
+        font-size: 2rem;
+      }
+    }
+
+    &__subtitle {
+      color: white;
+      font-weight: 300;
+      text-align: center;
+      font-size: 2rem;
+      margin: 0;
+
+      @include responsive(portatil-standard) {
+        font-size: 1.5rem;
+      }
+
+      @include responsive(mobile-large) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
