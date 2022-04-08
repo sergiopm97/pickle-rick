@@ -1,0 +1,9 @@
+$breakpoints: (
+  mobile-large: 425px,
+);
+
+@mixin responsive($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

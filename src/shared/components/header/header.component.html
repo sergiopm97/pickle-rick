@@ -1,0 +1,38 @@
+<header [class.active-header]="visibility">
+  <div class="header-container">
+    <a>
+      <img
+        class="header-container--logo"
+        src="../../../assets/icons/rick-morty-logo.svg"
+        alt="logo"
+      />
+    </a>
+
+    <nav class="main-nav">
+      <li><a>Characters</a></li>
+      <li><a>Creations</a></li>
+      <li><a>About</a></li>
+      <li><a id="about">Contact</a></li>
+    </nav>
+
+    <div (click)="updateVisibility()" class="hamburger-nav">
+      <div [class.active-level]="visibility" class="hamburger-nav__level"></div>
+      <div [class.active-level]="visibility" class="hamburger-nav__level"></div>
+      <div [class.active-level]="visibility" class="hamburger-nav__level"></div>
+    </div>
+  </div>
+</header>
+
+<div
+  [hidden]="!visibility"
+  class="hamburger-menu"
+  (window:resize)="checkResponsive($event)"
+  [class.hidden-hamburger]="!responsive"
+>
+  <nav class="hamburger-menu__nav">
+    <li><a>Characters</a></li>
+    <li><a>Creations</a></li>
+    <li><a>About</a></li>
+    <li><a id="about-responsive">Contact</a></li>
+  </nav>
+</div>

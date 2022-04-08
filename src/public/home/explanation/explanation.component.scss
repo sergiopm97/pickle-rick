@@ -1,0 +1,106 @@
+@import "../utilities/responsive";
+
+.explanation-container {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  display: flex;
+
+  &__content {
+    display: flex;
+    max-width: 120rem;
+    padding: 5rem 0rem 5rem 0rem;
+    align-items: center;
+    max-height: 35rem;
+    gap: 2.5rem;
+
+    @include responsive(portatil-large) {
+      gap: 1rem;
+    }
+
+    @include responsive(portatil-standard) {
+      max-height: none;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    &__box {
+      height: 26rem;
+      align-items: center;
+      transition: 0.5s box-shadow ease;
+      justify-content: center;
+      padding: 0rem 1rem 0rem 1rem;
+      background-color: #b3e673;
+      flex-direction: column;
+      border-radius: 2rem;
+      display: flex;
+      width: 26rem;
+      gap: 0.5rem;
+
+      &:hover {
+        box-shadow: 10px 10px 0px 0px black;
+      }
+
+      @include responsive(portatil-large) {
+        height: 28vw;
+        width: 28vw;
+      }
+
+      @include responsive(portatil-standard) {
+        height: 75vw;
+        padding: 0rem 2rem 0rem 2rem;
+        width: 75vw;
+      }
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 2rem;
+
+      @include responsive(portatil-large) {
+        font-size: 2.5vw;
+      }
+
+      @include responsive(portatil-standard) {
+        font-size: 6vw;
+      }
+    }
+
+    &__paragraph {
+      font-size: 1.4rem;
+      text-align: center;
+
+      @include responsive(portatil-large) {
+        font-size: 1.5vw;
+      }
+
+      @include responsive(portatil-standard) {
+        font-size: 4vw;
+      }
+    }
+
+    &__button {
+      border: none;
+      font-size: 1.5rem;
+      transition: 0.5s filter ease;
+      background-color: black;
+      padding: 0.7rem 2rem 0.7rem 2rem;
+      border-radius: 1rem;
+      color: #b3e673;
+      cursor: pointer;
+
+      &:hover {
+        filter: opacity(85%);
+      }
+
+      @include responsive(portatil-large) {
+        font-size: 1.5vw;
+      }
+
+      @include responsive(portatil-standard) {
+        font-size: 4.5vw;
+      }
+    }
+  }
+}

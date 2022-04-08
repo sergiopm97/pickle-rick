@@ -1,0 +1,103 @@
+@import "../utilities/responsive";
+
+.about-container {
+  width: 100%;
+  align-items: center;
+  padding: 3rem 0rem 3rem 0rem;
+  justify-content: center;
+  display: flex;
+
+  @include responsive(portatil-standard) {
+    padding: none;
+  }
+
+  &__content {
+    display: flex;
+    max-width: 100rem;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 35rem;
+
+    @include responsive(portatil-standard) {
+      max-height: none;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &--image {
+      width: 30%;
+
+      @include responsive(portatil-standard) {
+        display: none;
+      }
+    }
+
+    &__text {
+      width: 50%;
+      flex-direction: column;
+      display: flex;
+      gap: 2rem;
+
+      @include responsive(portatil-standard) {
+        width: 80%;
+      }
+
+      &--title {
+        color: white;
+        font-size: 4rem;
+        margin: 0;
+
+        @include responsive(portatil-large) {
+          font-size: 4vw;
+        }
+
+        @include responsive(portatil-standard) {
+          font-size: 10vw;
+        }
+      }
+
+      &--paragraph {
+        color: white;
+        font-size: 1.5rem;
+
+        @include responsive(portatil-large) {
+          font-size: 1.5vw;
+        }
+
+        @include responsive(portatil-standard) {
+          font-size: 4vw;
+        }
+      }
+
+      &--button {
+        height: 4rem;
+        border: none;
+        color: #24282f;
+        font-size: 1.8rem;
+        background-color: #b3e673;
+        font-family: "Kanit", sans-serif;
+        transition: 0.5s filter ease;
+        border-radius: 4rem;
+        font-weight: 700;
+        width: 11rem;
+
+        &:hover {
+          filter: opacity(70%);
+        }
+
+        @include responsive(portatil-large) {
+          width: 11vw;
+          font-size: 1.5vw;
+          height: 4vw;
+        }
+
+        @include responsive(portatil-standard) {
+          width: 28vw;
+          margin: auto;
+          font-size: 5vw;
+          height: 10vw;
+        }
+      }
+    }
+  }
+}
