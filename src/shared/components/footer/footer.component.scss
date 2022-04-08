@@ -1,0 +1,59 @@
+@import "utilities/responsive";
+
+footer {
+  width: 100%;
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  background-color: #b3e673;
+  align-items: center;
+  height: 12rem;
+
+  @include responsive(mobile-large) {
+    height: 6rem;
+  }
+}
+
+.footer-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 120rem;
+  height: 80%;
+
+  &--creator {
+    a {
+      display: inline;
+      text-decoration: none;
+      transition: padding-bottom 0.2s ease-in-out;
+      border-bottom: solid 0.1rem;
+
+      &:hover {
+        padding-bottom: 0.2rem;
+      }
+
+      &:visited {
+        color: initial;
+      }
+    }
+
+    @include responsive(mobile-large) {
+      font-size: 5vw;
+    }
+  }
+
+  &--logo {
+    height: 5rem;
+    transition: filter 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      filter: opacity(85%);
+    }
+
+    @include responsive(mobile-large) {
+      height: 18vw;
+    }
+  }
+}

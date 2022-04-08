@@ -5,6 +5,7 @@ import { HeaderModule } from 'src/shared/components/header/header.module';
 import { WelcomeModule } from './welcome/welcome.module';
 import { ExplanationModule } from './explanation/explanation.module';
 import { AboutModule } from './about/about.module';
+import { FooterModule } from 'src/shared/components/footer/footer.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -14,6 +15,7 @@ import { AboutModule } from './about/about.module';
     WelcomeModule,
     ExplanationModule,
     AboutModule,
+    FooterModule,
   ],
   exports: [HomeComponent],
 })
