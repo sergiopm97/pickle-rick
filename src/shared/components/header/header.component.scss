@@ -36,6 +36,16 @@ nav {
       filter: opacity(70%);
     }
   }
+
+  a:-webkit-any-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s ease;
+
+    &:hover {
+      filter: opacity(70%);
+    }
+  }
 }
 
 li {
@@ -112,6 +122,16 @@ li {
     font-size: 2.5rem;
     color: black;
     width: 100%;
+
+    a:-webkit-any-link {
+      color: initial;
+      text-decoration: none;
+      transition: 0.5s ease;
+
+      &:hover {
+        filter: opacity(70%);
+      }
+    }
   }
 }
 
