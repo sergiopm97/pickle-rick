@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersService } from './services/characters.service';
+import { ajax } from 'rxjs/ajax';
 
 @Component({
   selector: 'app-characters',
@@ -7,11 +7,22 @@ import { CharactersService } from './services/characters.service';
   styleUrls: ['./characters.component.scss'],
 })
 export class CharactersComponent implements OnInit {
-  public characters: Array<any> = [];
-  constructor(private CharactersService: CharactersService) {
-    this.CharactersService.getCharacters().subscribe((res: any) => {
-      this.characters = res;
-    });
+  characters = new Array<any>();
+  constructor() {
+    for (let page = 1; page < 42 + 1; page++) {
+      const apiData = ajax(
+        `https://rickandmortyapi.com/api/character/?page=${page}`
+      );
+      apiData.subscribe((res: any) => {
+        for (
+          let character = 0;
+          character < res.response['results'].length;
+          character++
+        ) {
+          this.characters.push(res.response['results'][character]);
+        }
+      });
+    }
   }
 
   ngOnInit(): void {}
