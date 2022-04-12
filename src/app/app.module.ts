@@ -5,11 +5,18 @@ import { HomeModule } from 'src/public/home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { CharactersService } from 'src/public/characters/services/characters.service';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HomeModule, CharactersModule, NgxPaginationModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HomeModule,
+    CharactersModule,
+    NgxPaginationModule,
+  ],
+  providers: [CharactersService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
