@@ -7,6 +7,7 @@ import { ajax } from 'rxjs/ajax';
   styleUrls: ['./characters.component.scss'],
 })
 export class CharactersComponent implements OnInit {
+  page: number = 1;
   characters = new Array<any>();
   constructor() {
     for (let page = 1; page < 42 + 1; page++) {
