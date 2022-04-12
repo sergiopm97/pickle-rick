@@ -160,3 +160,11 @@ li {
   padding: 0.3rem 1.2rem 0.3rem 1.2rem;
   border-radius: 4rem;
 }
+
+.active-link {
+  border-bottom: solid 0.1rem white;
+}
+
+.active-link--hamburger {
+  border-bottom: solid 0.1rem black;
+}
