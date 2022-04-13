@@ -8,6 +8,7 @@ import { CharactersService } from './services/characters.service';
 })
 export class CharactersComponent implements OnInit {
   page: number = 1;
+  characterName: string = "";
   characters = new Array<any>();
   constructor(charactersService: CharactersService) {
     this.characters = charactersService.getCharacters();

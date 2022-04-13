@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CharactersService } from 'src/public/characters/services/characters.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { CharactersService } from 'src/public/characters/services/characters.ser
     HomeModule,
     CharactersModule,
     NgxPaginationModule,
+    FormsModule
   ],
   providers: [CharactersService],
   bootstrap: [AppComponent],
