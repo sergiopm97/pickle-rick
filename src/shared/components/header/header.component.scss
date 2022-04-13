@@ -36,6 +36,16 @@ nav {
       filter: opacity(70%);
     }
   }
+
+  a:-webkit-any-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s ease;
+
+    &:hover {
+      filter: opacity(70%);
+    }
+  }
 }
 
 li {
@@ -112,6 +122,16 @@ li {
     font-size: 2.5rem;
     color: black;
     width: 100%;
+
+    a:-webkit-any-link {
+      color: initial;
+      text-decoration: none;
+      transition: 0.5s ease;
+
+      &:hover {
+        filter: opacity(70%);
+      }
+    }
   }
 }
 
@@ -139,4 +159,12 @@ li {
   background-color: #b3e673;
   padding: 0.3rem 1.2rem 0.3rem 1.2rem;
   border-radius: 4rem;
+}
+
+.active-link {
+  border-bottom: solid 0.1rem white;
+}
+
+.active-link--hamburger {
+  border-bottom: solid 0.1rem black;
 }

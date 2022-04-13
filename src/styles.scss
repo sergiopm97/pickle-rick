@@ -3,3 +3,25 @@ body {
   font-family: "Kanit", sans-serif;
   background-color: #24282f;
 }
+
+.ngx-pagination {
+  margin-bottom: -10rem !important;
+}
+
+.ngx-pagination a {
+  color: white !important;
+
+  &:hover {
+    color: white !important;
+    background-color: black !important;
+  }
+}
+
+.ngx-pagination .current {
+  color: black !important;
+  background-color: #b3e673 !important;
+}
+
+.ngx-pagination.responsive .small-screen {
+  color: white !important;
+}

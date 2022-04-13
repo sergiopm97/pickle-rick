@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="characters-container">
+  <div
+    *ngFor="
+      let character of characters
+        | filter: characterName
+        | paginate: { itemsPerPage: 12, currentPage: page }
+    "
+    class="characters-container__character"
+  >
+    <img
+      class="characters-container__character--image"
+      src="{{ character.image }}"
+      alt="character-image"
+    />
+    <div class="characters-container__character__content">
+      <a class="characters-container__character__content--name">{{
+        character.name
+      }}</a>
+      <h2 class="characters-container__character__content__status">
+        Status:
+        <span class="characters-container__character__content__status--text">{{
+          character.status.charAt(0).toUpperCase() + character.status.slice(1)
+        }}</span>
+      </h2>
+      <button
+        routerLink="{{ character.id }}"
+        class="characters-container__character__content--details"
+      >
+        See more
+      </button>
+    </div>
+  </div>
+  <pagination-controls
+    [responsive]="true"
+    (pageChange)="page = $event"
+  ></pagination-controls>
+</div>
+
+<div class="browser">
+  <input
+    class="browser--input"
+    placeholder="Search a character..."
+    [(ngModel)]="characterName"
+    type="text"
+  />
+</div>
+
+<app-footer></app-footer>

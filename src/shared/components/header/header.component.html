@@ -1,6 +1,6 @@
 <header [class.active-header]="visibility">
   <div class="header-container">
-    <a>
+    <a routerLink="/">
       <img
         class="header-container--logo"
         src="../../../assets/icons/rick-morty-logo.svg"
@@ -9,7 +9,11 @@
     </a>
 
     <nav class="main-nav">
-      <li><a>Characters</a></li>
+      <li>
+        <a routerLinkActive="active-link" routerLink="/characters"
+          >Characters</a
+        >
+      </li>
       <li><a>Creations</a></li>
       <li><a>About</a></li>
       <li><a id="about">Contact</a></li>
@@ -30,7 +34,11 @@
   [class.hidden-hamburger]="!responsive"
 >
   <nav class="hamburger-menu__nav">
-    <li><a>Characters</a></li>
+    <li>
+      <a routerLinkActive="active-link--hamburger" routerLink="/characters"
+        >Characters</a
+      >
+    </li>
     <li><a>Creations</a></li>
     <li><a>About</a></li>
     <li><a id="about-responsive">Contact</a></li>
