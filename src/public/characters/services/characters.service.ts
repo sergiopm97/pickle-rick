@@ -6,6 +6,7 @@ export class CharactersService {
   charactersData = new Array<any>();
   constructor() {
     interface CharacterPreview {
+      id: number;
       name: string;
       status: string;
       image: string;
@@ -21,9 +22,10 @@ export class CharactersService {
           character++
         ) {
           let characterObject: CharacterPreview = {
+            id: res.response['results'][character]['id'],
             name: res.response['results'][character]['name'],
             status: res.response['results'][character]['status'],
-            image: res.response['results'][character]['image']
+            image: res.response['results'][character]['image'],
           };
           this.charactersData.push(characterObject);
         }

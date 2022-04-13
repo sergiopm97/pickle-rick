@@ -24,7 +24,10 @@
           character.status.charAt(0).toUpperCase() + character.status.slice(1)
         }}</span>
       </h2>
-      <button class="characters-container__character__content--details">
+      <button
+        routerLink="{{ character.id }}"
+        class="characters-container__character__content--details"
+      >
         See more
       </button>
     </div>
