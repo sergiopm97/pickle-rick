@@ -1,1 +1,48 @@
-<p>character works!</p>
+<app-header></app-header>
+
+<div *ngFor="let characterData of character" class="character-container">
+  <div class="character-container__content">
+    <img
+      class="character-container__content--image"
+      src="{{ characterData.image }}"
+      alt="character-image"
+    />
+    <div class="character-container__content__info">
+      <h1 class="character-container__content__info--name">
+        {{ characterData.name }}
+      </h1>
+
+      <h2 class="character-container__content__info__detail">
+        Status:
+        <span class="character-container__content__info__detail--text">{{
+          characterData.status.charAt(0).toUpperCase() +
+            characterData.status.slice(1)
+        }}</span>
+      </h2>
+
+      <h2 class="character-container__content__info__detail">
+        Species:
+        <span class="character-container__content__info__detail--text">{{
+          characterData.species.charAt(0).toUpperCase() +
+            characterData.species.slice(1)
+        }}</span>
+      </h2>
+
+      <h2 class="character-container__content__info__detail">
+        Gender:
+        <span class="character-container__content__info__detail--text">{{
+          characterData.gender.charAt(0).toUpperCase() +
+            characterData.gender.slice(1)
+        }}</span>
+      </h2>
+
+      <h2 class="character-container__content__info__detail">
+        Location:
+        <span class="character-container__content__info__detail--text">{{
+          characterData.location.name.charAt(0).toUpperCase() +
+            characterData.location.name.slice(1)
+        }}</span>
+      </h2>
+    </div>
+  </div>
+</div>

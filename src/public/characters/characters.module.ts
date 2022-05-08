@@ -8,6 +8,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { CharacterModule } from './character/character.module';
 
 @NgModule({
   declarations: [CharactersComponent, FilterPipe],
@@ -19,6 +20,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     NgxPaginationModule,
     FormsModule,
     AppRoutingModule,
+    CharacterModule
   ],
   exports: [CharactersComponent],
 })
