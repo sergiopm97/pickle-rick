@@ -1,0 +1,16 @@
+{
+  "creations": [
+    {
+      "name": "Metal Rick",
+      "status": "Dead",
+      "image": "https://rickandmortyapi.com/api/character/avatar/701.jpeg",
+      "id": 1
+    },
+    {
+      "name": "Gun Brain Rick",
+      "status": "Dead",
+      "image": "https://rickandmortyapi.com/api/character/avatar/702.jpeg",
+      "id": 2
+    }
+  ]
+}

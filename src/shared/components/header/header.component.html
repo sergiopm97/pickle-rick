@@ -16,7 +16,14 @@
       </li>
       <li><a>Creations</a></li>
       <li><a>About</a></li>
-      <li><a id="about">Contact</a></li>
+      <li>
+        <a
+          routerLinkActive="active-link-create"
+          routerLink="/create"
+          id="create"
+          >Create</a
+        >
+      </li>
     </nav>
 
     <div (click)="updateVisibility()" class="hamburger-nav">
@@ -41,6 +48,13 @@
     </li>
     <li><a>Creations</a></li>
     <li><a>About</a></li>
-    <li><a id="about-responsive">Contact</a></li>
+    <li>
+      <a
+        routerLinkActive="active-link-create--hamburger"
+        routerLink="/create"
+        id="create-responsive"
+        >Create</a
+      >
+    </li>
   </nav>
 </div>

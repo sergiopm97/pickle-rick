@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div class="succesfull-post" *ngIf="message">
+  <p class="succesfull-post--message">Creation successfully generated 👌</p>
+</div>
+
+<div class="create-container">
+  <div class="create-container__content">
+    <h1 class="create-container__content--title">Create your character</h1>
+    <form [formGroup]="formValue">
+      <label>Name</label>
+      <input formControlName="name" />
+      <label>Status</label>
+      <input formControlName="status" />
+      <label>Image</label>
+      <input formControlName="image" />
+      <button
+        (click)="uploadCreation(); formValue.reset()"
+        [disabled]="!formValue.valid"
+        id="create"
+      >
+        Create
+      </button>
+    </form>
+  </div>
+</div>

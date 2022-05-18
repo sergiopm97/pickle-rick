@@ -1,0 +1,97 @@
+@import "utilities/responsive";
+
+.succesfull-post {
+  bottom: 0;
+  z-index: 999;
+  background-color: #67f3ac;
+  padding: 0.2rem 1.5rem 0.2rem 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+
+  @include responsive(mobile-small) {
+    width: 100%;
+    text-align: center;
+    font-size: 5vw;
+    padding: 0;
+  }
+}
+
+.create-container {
+  width: 100%;
+  align-items: center;
+  height: calc(100vh - 8.5rem);
+  justify-content: center;
+  margin-top: 8.5rem;
+  display: flex;
+
+  &__content {
+    width: 60rem;
+    display: flex;
+    max-width: 100rem;
+    justify-content: center;
+    background-color: #67f3ac;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    height: 40rem;
+
+    @include responsive(tablet-standard) {
+      width: 95%;
+    }
+
+    &--title {
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+
+      @include responsive(tablet-standard) {
+        font-size: 7vw;
+      }
+
+      @include responsive(mobile-large) {
+        font-size: 11vw;
+        text-align: center;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @include responsive(tablet-standard) {
+        width: 90%;
+      }
+
+      label {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      input {
+        height: 2.5rem;
+        font-size: 1rem;
+        padding-left: 0.5rem;
+        font-family: "Kanit", sans-serif;
+        margin-bottom: 1rem;
+        border: none;
+      }
+
+      button {
+        height: 3rem;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        font-family: "Kanit", sans-serif;
+        background-color: black;
+        margin-bottom: 0;
+        color: white;
+        border: none;
+
+        &:disabled {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+}

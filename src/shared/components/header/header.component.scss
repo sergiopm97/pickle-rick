@@ -147,14 +147,14 @@ li {
   background-color: black;
 }
 
-#about {
+#create {
   color: #24282f;
   background-color: #b3e673;
   padding: 0.5rem 1.2rem 0.5rem 1.2rem;
   border-radius: 4rem;
 }
 
-#about-responsive {
+#create-responsive {
   color: #24282f;
   background-color: #b3e673;
   padding: 0.3rem 1.2rem 0.3rem 1.2rem;
@@ -167,4 +167,14 @@ li {
 
 .active-link--hamburger {
   border-bottom: solid 0.1rem black;
+}
+
+.active-link-create {
+  color: #24282f !important;
+  background-color: #67f3ac !important;
+}
+
+.active-link-create--hamburger {
+  color: #24282f !important;
+  background-color: #67f3ac !important;
 }
